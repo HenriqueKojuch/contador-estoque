@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contagem de Estoque</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Contagem de Estoque</h1>
+
+        <div class="input-section">
+            <label for="codigo">Código do Item:</label>
+            <input type="text" id="codigo" placeholder="Escanear ou digitar código">
+
+            <label for="itemDescription">Descrição do Item:</label>
+            <input type="text" id="itemDescription" placeholder="Ex: Parafuso Philips">
+
+            <label for="pallets">Quantidade de Paletes:</label>
+            <input type="number" id="pallets" value="0" min="0">
+
+            <label for="boxes">Quantidade de Caixas por Palete:</label>
+            <input type="number" id="boxes" value="0" min="0">
+
+            <label for="units">Quantidade de Unidades por Caixa:</label>
+            <input type="number" id="units" value="0" min="0">
+
+            <button id="addItem">Adicionar Item</button>
+        </div>
+
+        <div class="inventory-list">
+            <h2>Itens Adicionados</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Código</th> <th>Descrição</th>
+                        <th>Paletes</th>
+                        <th>Caixas/Palete</th>
+                        <th>Unidades/Caixa</th>
+                        <th>Total Unidades</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="inventoryTableBody">
+                    </tbody>
+            </table>
+            <button id="exportCsv">Exportar para CSV</button>
+            <button id="clearAll">Limpar Tudo</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
